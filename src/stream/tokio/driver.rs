@@ -162,10 +162,6 @@ where
             break;
         }
 
-        if let Some(event) = this.driver.inner.poll_event() {
-            return Poll::Ready(Ok(event));
-        }
-
         Poll::Pending
     }
 }
